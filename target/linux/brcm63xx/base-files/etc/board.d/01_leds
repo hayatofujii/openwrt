@@ -16,6 +16,11 @@ a4001n1)
 a4001n)
 	ucidef_set_led_usbdev "usb" "USB" "A4001N:green:usb" "1-1"
 	;;
+e4001n)
+	ucidef_set_led_netdev "lan" "LAN" "E4001N:green:eth" "eth0.1"
+	ucidef_set_led_netdev "wlan0" "WIFI" "E4001N:green:wlan" "wlan0"
+	ucidef_set_led_usbdev "usb" "USB" "E4001N:green:usb" "1-1"
+	;;
 dgnd3700v1_dgnd3800b)
 	ucidef_set_led_netdev "lan" "LAN" "DGND3700v1_3800B:green:lan" "eth0.1"
 	ucidef_set_led_netdev "wan" "WAN" "DGND3700v1_3800B:green:inet" "eth0.2"

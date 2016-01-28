@@ -84,6 +84,11 @@ bcm96328avng |\
 bcm96368mvngr |\
 dsl-274xb-f |\
 dsl-275xb-d |\
+e4001n)
+	ucidef_add_switch "switch0" \
+		"0:lan" "1:lan" "2:lan" "3:wan" "8t@eth0"
+	;;
+
 fast2504n |\
 fast2704v2 |\
 hg622 |\

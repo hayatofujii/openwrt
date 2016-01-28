@@ -1,0 +1,79 @@
+/dts-v1/;
+
+#include "bcm6328.dtsi"
+
+#include <dt-bindings/input/input.h>
+
+/ {
+	model = "ADB P.DG E4001N";
+	compatible = "adb,e4001n", "brcm,bcm6328";
+
+	gpio-keys-polled {
+		compatible = "gpio-keys-polled";
+		#address-cells = <1>;
+		#size-cells = <0>;
+		poll-interval = <20>;
+		debounce-interval = <60>;
+
+		reset {
+			label = "reset";
+			gpios = <&gpio0 23 1>;
+			linux,code = <KEY_RESTART>;
+		};
+		wps {
+			label = "wps";
+			gpios = <&gpio0 24 1>;
+			linux,code = <KEY_WLAN>;
+		};
+	};
+
+	gpio-leds {
+		compatible = "gpio-leds";
+
+		power_green {
+			label = "E4001N:green:power";
+			gpios = <&gpio0 4 1>;
+			default-state = "on";
+		};
+		power_red {
+			label = "E4001N:red:power";
+			gpios = <&gpio0 8 1>;
+		};
+
+		inet_green {
+			label = "E4001N:green:inet";
+			gpios = <&gpio0 3 1>;
+		};
+		inet_red {
+			label = "E4001N:red:inet";
+			gpios = <&gpio0 5 1>;
+		};
+
+		eth_green {
+			label = "E4001N:green:eth";
+			gpios = <&gpio0 11 1>;
+		};
+		eth_red {
+			label = "E4001N:red:eth";
+			gpios = <&gpio0 2 1>;
+		};
+
+		wlan_green {
+			label = "E4001N:green:wlan";
+			gpios = <&gpio0 9 1>;
+		};
+		wlan_red {
+			label = "E4001N:red:wlan";
+			gpios = <&gpio0 10 1>;
+		};
+
+		usb_green {
+			label = "E4001N:green:usb";
+			gpios = <&gpio0 6 1>;
+		};
+		usb_red {
+			label = "E4001N:red:usb";
+			gpios = <&gpio0 7 1>;
+		};
+	};
+};

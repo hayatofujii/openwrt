@@ -24,3 +24,13 @@ define Profile/A4001N1/Description
   Package set optimized for A4001N1.
 endef
 $(eval $(call Profile,A4001N1))
+
+define Profile/E4001N
+  NAME:=ADB P.DG E4001N
+  PACKAGES:=kmod-b43 wpad-mini \
+	kmod-usb2 kmod-usb-ohci
+endef
+define Profile/E4001N/Description
+  Package set optimized for E4001N.
+endef
+$(eval $(call Profile,E4001N))

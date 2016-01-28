@@ -18,6 +18,7 @@ set_preinit_iface() {
 	dsl-274xb-c |\
 	dsl-274xb-f |\
 	dsl-275xb-d |\
+	e4001n |\
 	fast2504n |\
 	fast2704v2 |\
 	hg553 |\

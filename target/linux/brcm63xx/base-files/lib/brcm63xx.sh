@@ -18,6 +18,9 @@ brcm63xx_dt_detect() {
 	"ADB P.DG A4001N1")
 		board_name="a4001n1"
 		;;
+	"ADB P.DG E4001N")
+		board_name="e4001n"
+		;;
 	"Alcatel RG100A")
 		board_name="rg100a"
 		;;
